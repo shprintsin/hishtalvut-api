@@ -1,0 +1,81 @@
+
+    {
+        "survey":
+        [
+            {"slug":"mechina","date":"01212024","content":
+            {
+                "pages": [
+                  {
+                    "elements": [
+                      {
+                        "type": "radiogroup",
+                        "name": "gender",
+                        "title": "מגדר",
+                        "choices": ["זכר", "נקבה"]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "charediEducation",
+                        "title": "בוגר החינוך החרדי",
+                        "choices": [
+                          { "value": 1, "text": "כן" },
+                        { "value": 0, "text": "לא" }]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "studiedForBagrut",
+                        "title": "האם למדת בבית ספר המלמד לבגרות?",
+                        "choices": [  { "value": 1, "text": "כן" },
+                        { "value": 0, "text": "לא" }],
+                        "visibleIf": "{charediEducation} = 1"
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "typeOfPreparation",
+                        "title": "האם למדת ללימודי הכנה לבגרות?",
+                        "choices": [
+                          "למדתי במכינה קדם אקדמית",
+                          "למדתי במכינה להשלמת בגרויות",
+                          "השלמתי בגרות אקסטרנית"
+                        ],
+                        "visibleIf": "{studiedForBagrut} = 1"
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "typeOfPreAcademic",
+                        "title": "האם למדת במכינה ייעודית לחרדים או במכינה כללית (משולבת בקמפוס)?",
+                        "choices": ["למדתי במכינה ייעודית", "למדתי במכינה כללית"],
+                        "visibleIf": "{typeOfPreparation} = 'למדתי במכינה קדם אקדמית'"
+                      },
+                      {
+                        "type": "text",
+                        "name": "specificPreAcademic",
+                        "title": "באיזו מכינה למדת?",
+                        "visibleIf": "{typeOfPreAcademic} = 'למדתי במכינה ייעודית'"
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "continuedToDegree",
+                        "title": "האם המשכת לתואר?",
+                        "choices": [  { "value": 1, "text": "כן" },
+                        { "value": 0, "text": "לא" }],
+                        "visibleIf": "{typeOfPreparation} notempty"
+                      }
+                    ]
+                  }
+                ],
+                "showQuestionNumbers": "off",
+                "pageNextText": "Forward",
+                "completeText": "Submit",
+                "showPrevButton": true,
+                "firstPageIsStarted": true,
+                "startSurveyText": "Take the Survey",
+                "completedHtml": "Thank you for your feedback!",
+                "showPreviewBeforeComplete": "showAnsweredQuestions"
+              }
+            
+        
+        }
+        ]
+    }
+    

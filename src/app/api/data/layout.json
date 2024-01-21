@@ -1,0 +1,16 @@
+{"MainMenu":
+[
+    {
+        "uri": "/pages/empty",
+        "label": "ספריה"
+      },
+      {
+        "uri": "/pages/surveys/mechina",
+        "label": "סקר מכינות"
+      },
+      {
+        "uri": "/pages/empty",
+        "label": "יצירת קשר"
+      }
+]
+}
